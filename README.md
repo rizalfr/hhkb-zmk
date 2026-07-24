@@ -35,7 +35,7 @@ west update
 To build nice_nano_v2 based board:
 
 ```sh
-west build -s zmk/app -p -b nice_nano_v2 -- \
+west build -s zmk/app -p -b nice_nano_v2 -S studio-rpc-usb-uart -- \
     -DSHIELD="hhkb_pro2 custom_pro2" \
     -DZMK_CONFIG=$PWD/config
 ```
@@ -43,7 +43,7 @@ west build -s zmk/app -p -b nice_nano_v2 -- \
 or to build WHKB Pro2:
 
 ```sh
-west build -s zmk/app -p -b whkb_pro2 -- \
+west build -s zmk/app -p -b whkb_pro2 -S studio-rpc-usb-uart -- \
     -DSHIELD=hhkb_pro2 \
     -DZMK_CONFIG=$PWD/config
 ```
@@ -91,4 +91,3 @@ The 3D printed mount (@oldmanz) is designed to fit in the HHKB Pro2 case in plac
 - The switch was something I had laying around, so I am unsure of its part number.
 - The reset button is behind a 3D Printed Cap, by alienman82. A hole is drilled through it.
     - https://github.com/robotmaxtron/HHKB-usb-dust-covers
-  
